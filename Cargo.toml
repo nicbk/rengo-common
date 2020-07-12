@@ -1,0 +1,8 @@
+[package]
+name = "rengo-common"
+version = "0.1.0"
+authors = ["xrop <xrop@xrop.me>"]
+edition = "2018"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
