@@ -7,7 +7,6 @@ use {
         Move,
     },
     serde::{Serialize, Deserialize},
-    std::collections::HashMap,
 };
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -19,7 +18,8 @@ pub struct Player {
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Room {
-    pub players: HashMap<String, Player>,
+    // TODO: Use LinkedHashMap
+    pub players: Vec<(String, Player)>,
     pub current_player: String,
     pub self_player: String,
     pub board: Board,
